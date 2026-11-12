@@ -1,3 +1,6 @@
+import json
+from pathlib import Path
+
 def open_tasks(tasks):
     return [task["title"] for task in tasks if not task["done"]]
 
@@ -19,3 +22,7 @@ def parse_count(text):
         return int(text)
     except ValueError:
         return None
+
+def save_tasks(tasks, path):
+    path = Path(path)  
+    with path.open("w", encoding="utf-8") as file:

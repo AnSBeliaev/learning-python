@@ -87,14 +87,9 @@ python hello.py
 
 Папка `02-tooling`. Это ближайшие к JS-работе темы с PDF: модули, файлы, окружение, пакеты.
 
-- [ ] Модуль: `helpers.py` и `from helpers import ...`. Точка входа:
+- [x] Модуль: `02-tooling/tasks.py` и `from tasks import ...` в `main.py`. Точка входа `if __name__ == "__main__":`. Запуск из папки `02-tooling`: `python main.py`. Уже печатает открытые задачи, summary, `3` и `None`.
 
-```python
-if __name__ == "__main__":
-    main()
-```
-
-- [ ] `pathlib` и `with` для чтения и записи. `json` туда и обратно
+- [ ] `save_tasks` и `load_tasks` — пауза. Черновик начат в `02-tooling/tasks.py`. Вернёмся после блока собеседований по желанию.
 - [ ] Окружение и пакет. Аналог `npm install` в папке проекта:
 
 ```powershell
@@ -183,3 +178,11 @@ git push -u origin main
 git pull origin main --rebase
 git push -u origin main
 ```
+
+## Сейчас
+
+Курс сменён: подготовка к собеседованиям на Python-бэкенд, Junior / Junior+ / Middle-.
+
+Текущий блок лежит в `03-interview/01-language/TOPICS.md`. Это 10 пунктов по базе языка, без готовых ответов. Каждый пункт проверяется в интерпретаторе, объясняется вслух и сохраняется в отдельный `.py` рядом с этим файлом.
+
+`02-tooling` не трогаем: там остаётся черновик `save_tasks`. Следующие блоки (генераторы, декораторы, ООП, потоки и asyncio, FastAPI, LLM и RAG) получат свои папки после разбора этого.
